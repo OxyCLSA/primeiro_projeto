@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <title>Meu Cadastro</title>
+</head>
+
+<body>
+    
+    <form action="/salvarEstado" th:object="${estado}" method="post">
+        <label>Nome do Estado</label>
+        <input type="text" th:field="*{nome}"/>
+        
+        <label>Sigla do Estado</label>
+        <input type="text" th:field="*{sigla}"/>
+        
+        <input type="hidden" th:field="*{id}"/>
+        
+        <button type="submit">Salvar</button>
+    
+    </form>
+    
+</body>
+</html>
